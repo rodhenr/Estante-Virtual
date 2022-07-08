@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
     },
     titulo: { type: DataTypes.STRING, allowNull: false },
-    ano_lancamento: { type: DataTypes.DATE, allowNull: false },
+    ano_lancamento: { type: DataTypes.INTEGER, allowNull: false },
     num_paginas: { type: DataTypes.INTEGER, allowNull: false },
     descricao: { type: DataTypes.JSON, allowNull: false },
   });

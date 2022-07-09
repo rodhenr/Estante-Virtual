@@ -5,17 +5,17 @@ module.exports = {
     await queryInterface.bulkInsert(
       "autores",
       [
-        { autor_nome: "William P. Young" },
-        { autor_nome: "Antoine de Saint-Exupéry" },
-        { autor_nome: "Clarice Lispector" },
-        { autor_nome: "Mário de Andrade" },
-        { autor_nome: "Machado de Assis" },
-        { autor_nome: "João Guimarães Rosa" },
-        { autor_nome: "Cristóvão Tezza" },
-        { autor_nome: "Daniel Galera" },
-        { autor_nome: "Martha Batalha" },
-        { autor_nome: "Maria Valéria Rezende" },
-        { autor_nome: "Sérgio Rodrigues" },
+        { nome: "William P. Young" },
+        { nome: "Antoine de Saint-Exupéry" },
+        { nome: "Clarice Lispector" },
+        { nome: "Mário de Andrade" },
+        { nome: "Machado de Assis" },
+        { nome: "João Guimarães Rosa" },
+        { nome: "Cristóvão Tezza" },
+        { nome: "Daniel Galera" },
+        { nome: "Martha Batalha" },
+        { nome: "Maria Valéria Rezende" },
+        { nome: "Sérgio Rodrigues" },
       ],
       {}
     );

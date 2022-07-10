@@ -31,7 +31,7 @@ const filterLivros = async (req, res) => {
   const { filtro, orderBy } = req.query;
 
   if (!filtro || !orderBy || filtro === "" || orderBy === "")
-    return res.status(400).send("Termo inválido");
+    return res.status(400).send("Ops... Alguma informação está incorreta!");
 
   try {
     if (filtro === "editora") {
@@ -102,7 +102,7 @@ const filterLivros = async (req, res) => {
         data,
       });
     } else {
-      return;
+      return res.status(400).send("Ops... Alguma informação está incorreta!");
     }
   } catch (err) {
     res.status(500).send(err);

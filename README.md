@@ -3,9 +3,11 @@
 Esta é uma aplicação na qual se faz o controle de informações de uma lista de livros. As informações estão divididas entre as tabelas EDITORAS, AUTORES e LIVROS.
 Esta aplicação possui 3 rotas, todas elas são acessadas usando-se o método GET. São elas:
 
-- "/" -> Rota mais básica na qual retorna todas informações dos livros cadastrados no banco de dados
-- "/order" -> Rota na qual se é possível filtrar a ordem dos itens através de 2 queries, a primeira sendo o filtro(titulo, ano_lancamento, num_paginas) e a segunda sendo orderBy(ASC ou DESC).
-- "/search " -> Rota na qual é possível pesquisar por um termo e caso exista correspondência desse termo no titulo ou autor será retornado as informações destes livros para o usuário. É necessário passar uma query com a key "termo" e o value desejado.
+1. "/" = Rota mais básica na qual retorna todas informações dos livros cadastrados no banco de dados.
+
+2. "/order" = Rota na qual se é possível filtrar a ordem dos itens através de 2 queries, a primeira sendo o filtro(titulo, ano_lancamento, num_paginas) e a segunda sendo orderBy(ASC ou DESC).
+
+3. "/search" = Rota na qual é possível pesquisar por um termo com aquery com a key "termo" e o value desejado. Caso exista correspondência(s) desse termo no titulo ou autor, serão retornadas as informações para o usuário.
 
 
 ## :man_technologist: Tecnologias

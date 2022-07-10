@@ -23,15 +23,15 @@ const getLivros = async (req, res) => {
       data: livros,
     });
   } catch (err) {
-    return res.status(500).send(err);
+    res.status(500).send(err);
   }
 };
 
 const filterLivros = async (req, res) => {
-  //const { filtro, orderBy } = req.body;
+  const { filtro, orderBy } = req.query;
 
-  const filtro = "ano_lancamento";
-  const orderBy = "ASC";
+  if (!filtro || !orderBy || filtro === "" || orderBy === "")
+    return res.status(400).send("Termo inválido");
 
   try {
     if (filtro === "editora") {
@@ -105,12 +105,15 @@ const filterLivros = async (req, res) => {
       return;
     }
   } catch (err) {
-    return res.status(500).send(err);
+    res.status(500).send(err);
   }
 };
 
 const search = async (req, res) => {
-  const termo = "mac";
+  const { termo } = req.query;
+
+  if (!termo || termo === "") return res.status(400).send("Termo inválido");
+
   try {
     const data = await Livro.findAll({
       where: {
@@ -139,7 +142,7 @@ const search = async (req, res) => {
       data,
     });
   } catch (err) {
-    return res.status(500).send(err);
+    res.status(500).send(err);
   }
 };
 

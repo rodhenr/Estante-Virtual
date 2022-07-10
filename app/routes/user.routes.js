@@ -8,7 +8,7 @@ const {
 } = require("../controllers/user.controller");
 
 router.route("/").get(getLivros);
-router.route("/filtro").get(filterLivros);
+router.route("/order").get(filterLivros);
 router.route("/search").get(search);
 
 module.exports = router;
